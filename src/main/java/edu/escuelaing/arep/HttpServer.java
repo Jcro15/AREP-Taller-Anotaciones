@@ -117,9 +117,6 @@ public class HttpServer extends Thread {
 
     private void handleRequest(Request request, Socket clientSocket) throws IOException {
         Response endpointResponse=HttpMethodPublisher.execute(request);
-        if (request.getPath().equals("/")) {
-            request.setPath("/index.html");
-        }
         if(endpointResponse!=null){
             String header=generateHeader(false,endpointResponse.getType());
             PrintWriter out = new PrintWriter(outputStream, true);

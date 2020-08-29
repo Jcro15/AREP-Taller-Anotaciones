@@ -1,5 +1,11 @@
 # AREP-WebServer
 
+En este laboratorio se implementa un servidor capaz de 
+responder a solicitudes de archivos estáticos como imágenes o archivos html,
+este servidor cuenta con inversión de control y permite al usuario usar la notación
+@RequestMapping para construir POJOS para publicar peticiones GET personalizadas
+en el servidor.
+
 ## Pre-requisitos
 * [Maven](https://maven.apache.org/) - Administrador de dependencias
 * [Git](https://git-scm.com/) - Sistema de control de versiones
@@ -26,8 +32,11 @@ java -cp target/classes edu.escuelaing.arep.MicroSpringBoot edu.escuelaing.arep.
 
 
 ## EndPoint de prueba
-Para probar que la anotación está funcionando se debe consultar la ruta /test y se debería
-recibir la cadena "Greetings from Spring Boot! 10/10"
+Para probar que la anotación está funcionando se debe consultar la ruta / y se debería
+recibir la cadena "Greetings from Spring Boot! 10/10", también se puede acceder
+directamente al archivo estático  en /index.html . Finalmente se tiene el endpoint
+/hello que muestra un html con una imagen. Los dos endpoints mencionados se implementaron
+usando la anotación personalizada @RequestMapping.
 
 ## Enlace Heroku
   [Despliegue en Heroku](https://arepanotaciones.herokuapp.com/)
